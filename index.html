@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador de conversor de divisas</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <title>Buscar Productos</title>
 </head>
+
 <body>
-    <h1>Simulador de conversor de divisas</h1>
+    <div class="container">
+        <div class="Productos">
+            <h2>Productos disponibles</h2>
+            <h3>Tocar sobre el producto que deseas comprar</h3>
+            <ul id="product-list"></ul>
+        </div>
+        <div class="cart">
+            <h2>Carrito de compras</h2>
+            <ul id="cart-list"></ul>
+            <p id="total">Total: $0</p>
+            <button id="mostrar-resumen">Mostrar resumen</button>
+            <pre id="resumen-compra"></pre>
+        </div>
+        <div class="butones">
+            <button id="filtrar-precio">Filtrar por precio</button>
+            <button id="buscar-producto">Buscar producto</button>
+        </div>
+    </div>
     <script src="./js/script.js"></script>
 </body>
+
 </html>
