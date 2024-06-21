@@ -5,28 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscar Productos</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
+    <header>
+        <ul>
+            <li>
+                <a href="">
+</a>
+            </li>
+        </ul>
+    </header>
     <div class="container">
         <div class="Productos">
             <h2>Productos disponibles</h2>
-            <h3>Tocar sobre el producto que deseas comprar</h3>
-            <ul id="product-list"></ul>
+            <h3>Seleccione el producto que deseas comprar</h3>
+            <ul id="product-list" class="product-list"></ul>
+        </div>
+        
+        <div class="botones">
+            <label for="max-precio">Precio Máximo:</label>
+            <input type="number" id="max-precio" value="0" min="0">
+            <button id="filtrar-precio">Filtrar por precio</button>
+            <input type="text" id="nombre-producto" placeholder="Nombre del producto">
+            <button id="buscar-producto">Buscar producto</button>
+        </div>
+        
+        <div class="filtrar-productos">
+            <h2>Productos Filtrados</h2>
+            <ul id="filtrar-productos-list"></ul>
         </div>
         <div class="cart">
             <h2>Carrito de compras</h2>
             <ul id="cart-list"></ul>
             <p id="total">Total: $0</p>
+            <label for="descuento">Porcentaje de Descuento:</label>
+            <input type="number" id="descuento" value="0" min="0" max="100">
             <button id="mostrar-resumen">Mostrar resumen</button>
             <pre id="resumen-compra"></pre>
+            <button id="reiniciar-compra">Vaciar carrito</button>
         </div>
-        <div class="butones">
-            <button id="filtrar-precio">Filtrar por precio</button>
-            <button id="buscar-producto">Buscar producto</button>
-        </div>
+        
     </div>
     <script src="./js/script.js"></script>
+    <script src="./js/funciones.js"></script>
 </body>
 
 </html>
