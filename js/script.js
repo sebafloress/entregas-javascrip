@@ -1,10 +1,10 @@
 const productos = [
-    { id: 1, nombre: 'Pelota adidas afa22 pro', precio: 110000, cantidad: 30, imagen: '../fotos/pelotaA.png' },
-    { id: 2, nombre: 'Pelota orbita serie A', precio: 130000, cantidad: 20, imagen: '../fotos/pelota-puma.png' },
-    { id: 3, nombre: 'Canillera kick topper', precio: 13000, cantidad: 43, imagen: '../fotos/canilleras.png' },
-    { id: 4, nombre: 'Botines fútbol nike mercurial superfly 9 elite Fg', precio: 380000, cantidad: 15, imagen: '../fotos/botines-nike.png' },
-    { id: 5, nombre: 'Botines predator adidas', precio: 380000, cantidad: 15, imagen: '../fotos/botines.jpeg' },
-    { id: 6, nombre: 'Paleta De padel adidas metalbone Hrd 3.2', precio: 527000, cantidad: 20, imagen: '../fotos/padel.png' }
+    { id: 1, nombre: 'Pelota adidas afa22 pro', precio: 110000, cantidad: 30, imagen: './fotos/pelotaA.png' },
+    { id: 2, nombre: 'Pelota orbita serie A', precio: 130000, cantidad: 20, imagen: './fotos/pelota-puma.png' },
+    { id: 3, nombre: 'Canillera kick topper', precio: 13000, cantidad: 43, imagen: './fotos/canilleras.png' },
+    { id: 4, nombre: 'Botines fútbol nike mercurial superfly 9 elite Fg', precio: 380000, cantidad: 15, imagen: './fotos/botines-nike.png' },
+    { id: 5, nombre: 'Botines predator adidas', precio: 380000, cantidad: 15, imagen: './fotos/botines.jpeg' },
+    { id: 6, nombre: 'Paleta De padel adidas metalbone Hrd 3.2', precio: 527000, cantidad: 20, imagen: './fotos/padel.png' }
 ];
 
 const IVA = 0.21;
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         container.classList.toggle('modo-oscuro');
         productosDark.classList.toggle('modo-oscuro');
         botons.classList.toggle('modo-oscuro');
-        carritoDark.classList.toggle('modo-oscuro');
+        carritoDark.classList.toggle
         updateButtonText();
     })
 
