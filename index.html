@@ -4,19 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscar Productos</title>
+    <title>E-commerse</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./fotos/pelota.png" >
 </head>
 
 <body>
-    <header>
-        <ul>
-            <li>
-                <a href="">
-</a>
-            </li>
-        </ul>
+    <header id="header">
+        <button id="toggle-button">Cambiar a modo oscuro</button>
     </header>
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active"><img src="./fotos/fondo.jpg"></div>
+            <div class="carousel-item"><img src="./fotos/fondo2.webp" ></div>
+            <div class="carousel-item"><img src="./fotos/__adidas performance.jpg"></div>
+        </div>
+        <button class="carousel-control prev" id="prevBtn"></button>
+        <button class="carousel-control next" id="nextBtn"></button>
+    </div>
     <div class="container">
         <div class="Productos">
             <h2>Productos disponibles</h2>
@@ -27,9 +32,10 @@
         <div class="botones">
             <label for="max-precio">Precio Máximo:</label>
             <input type="number" id="max-precio" value="0" min="0">
-            <button id="filtrar-precio">Filtrar por precio</button>
-            <input type="text" id="nombre-producto" placeholder="Nombre del producto">
-            <button id="buscar-producto">Buscar producto</button>
+            <div class="botones">
+                <button id="filtrar-precio">Filtrar por precio</button>
+                <button id="buscar-producto">Buscar producto</button>
+            </div>
         </div>
         
         <div class="filtrar-productos">
@@ -44,12 +50,15 @@
             <input type="number" id="descuento" value="0" min="0" max="100">
             <button id="mostrar-resumen">Mostrar resumen</button>
             <pre id="resumen-compra"></pre>
-            <button id="reiniciar-compra">Vaciar carrito</button>
+            <button id="reiniciar-compra">Finalizar compra</button>
         </div>
         
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./js/script.js"></script>
-    <script src="./js/funciones.js"></script>
+    <script src="./js/functions.js"></script>
+    <script src="./js/global.js"></script>
+    <script src="./js/navegacion.js"></script>
+    <script src="./js/carrusel.js"></script>
 </body>
-
 </html>

@@ -4,6 +4,45 @@
     box-sizing: border-box;
 }
 
+.navbar {
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+.navbar nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navbar nav ul li a:hover {
+    color: #ddd;
+}
+
+.navbar img {
+    height: 60px;
+    width: 100px;
+}
+
 .Productos {
     background-color: #EAEEEF;
     display: flex;
@@ -28,7 +67,7 @@
     font-size: 1.475rem;
     background-color: black;
     color: white;
-    display:inline;
+    display: inline;
 }
 
 
@@ -57,10 +96,83 @@
 
 }
 
+#buscar-producto,
+#filtrar-precio {
+    background-color: #fff;
+    border: 0 solid #e2e8f0;
+    border-radius: 1.5rem;
+    box-sizing: border-box;
+    color: #0d172a;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none #0d172a solid;
+    text-decoration-thickness: auto;
+    transition: all .1s cubic-bezier(.4, 0, .2, 1);
+    box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+    user-select: none;
+    touch-action: manipulation;
+    text-align: center;
+    height: 30px;
+    width: 200px;
+}
+
+#max-precio {
+    background-color: #fff;
+    border: 0 solid #e2e8f0;
+    border-radius: 1.5rem;
+    box-sizing: border-box;
+    color: #0d172a;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none #0d172a solid;
+    text-decoration-thickness: auto;
+    transition: all .1s cubic-bezier(.4, 0, .2, 1);
+    box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+    user-select: none;
+    touch-action: manipulation;
+    text-align: center;
+    height: 30px;
+    width: 100px;
+}
+
 .botonAgregarCarrito:hover {
     background-color: #1e293b;
     color: #fff;
 }
+
+.filtrar-productos {
+    text-align: center;
+    font-size: 25px;
+    height: 300px;
+    background-color: #EAEEEF;
+    border: 1px solid rgba(128, 128, 128, 0.35);
+}
+
+.filtrar-productos h2 {
+    margin-bottom: 30px;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.475rem;
+    background-color: black;
+    color: white;
+}
+
+#filtrar-productos-list li {
+    margin: 5px;
+}
+
 .product-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -79,7 +191,7 @@
 }
 
 .product-item img {
-    width: 200px; /* Ajusta el tamaño de la imagen según sea necesario */
+    width: 200px;
     height: auto;
 }
 
@@ -87,22 +199,285 @@
     margin-top: 10px;
 }
 
-.producto-1 
-
-.product-image {
+.producto-1 .product-image {
     margin: 10px;
 
 }
-.product-item span{
+
+.product-item span {
     font-size: 20px;
     position: relative;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
 }
-.botones{
+
+.cart {
     background-color: #EAEEEF;
-    height: 100px;
-    padding: 30px;
+    height: 600PX;
+    text-align: center;
+    font-size: 1.6875rem;
+}
+
+#cart-list {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: solid 1px black;
+    width: 50%;
+    align-content: center;
+    margin: auto;
+    list-style: none;
+    border-radius: 30px;
+}
+
+#total {
+    color: red;
+    font-size: 39px;
+}
+
+#mostrar-resumen,
+#descuento {
+    background-color: #fff;
+    border: 0 solid #e2e8f0;
+    border-radius: 1.5rem;
+    box-sizing: border-box;
+    color: #0d172a;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    transition: all .1s cubic-bezier(.4, 0, .2, 1);
+    box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+    text-align: center;
+    height: 30px;
+    width: 200px;
+}
+
+#resumen-compra {
+    font-size: 15px;
+    text-align: center;
+    text-wrap: pretty;
+
+    padding: 16px;
+    width: 33%;
+    margin-left: 66%;
+    margin-top: 20px;
+}
+
+.botones {
+    background-color: #EAEEEF;
+    height: 200px;
+    padding-top: 30px;
     font-size: 1.5625rem;
-    
+    text-align: center;
+    font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.botones {
+    padding-top: 50px;
+}
+
+#reiniciar-compra {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 50px;
+    width: 400px;
+}
+
+#reiniciar-compra:hover {
+    background-color: #45a049;
+}
+
+#reiniciar-compra:active {
+    background-color: #3e8e41;
+}
+
+#toggle-button {
+    background-color: white;
+    display: inline;
+    color: black;
+    position: absolute;
+    height: 30px;
+    right: 0;
+    border-radius: 7px;
+}
+
+body.modo-oscuro {
+    background-color: black;
+    color: white;
+}
+
+div.modo-oscuro {
+    background-color: black;
+    color: white;
+}
+
+
+
+/* login*/
+
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 300px;
+    height: 300px;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.login-form {
+    margin-bottom: 0;
+}
+
+.message.success {
+    color: green;
+}
+
+.message.error {
+    color: red;
+}
+
+.form-container {
+    margin: auto;
+    margin-top: 80px;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 300px;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333333;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.login-form {
+    margin-bottom: 0;
+}
+
+.message.success {
+    color: green;
+}
+
+.message.error {
+    color: red;
+}
+
+.logout-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 300px;
+}
+
+.logout-container p {
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.logout-container button {
+    background-color: #ff0000;
+    border: 0 solid #e2e8f0;
+    border-radius: 1.5rem;
+    color: #0d172a;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+    user-select: none;
+    text-align: center;
+    height: 70px;
+    width: 300px;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    height: 300px;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    width: 100%;
+    display: block;
+    height: 300px
 }

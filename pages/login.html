@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/style.css">
+    
+</head>
+
+<body>
+    <header id="header"></header>
+    <div class="containerLogin">
+        <!-- Contenido específico de login -->
+            <div class="form-container login-form" id="loginFormContainer">
+                <h2>Iniciar Sesión</h2>
+                <form id="loginForm">
+                    <input type="text" id="loginUsername" placeholder="Nombre de usuario" required>
+                    <input type="password" id="loginPassword" placeholder="Contraseña" required>
+                    <button type="submit">Iniciar Sesión</button>
+                </form>
+                <div class="message" id="loginMessage"></div>
+            </div>
+        
+            <div class="form-container" id="registerFormContainer">
+                <h2>Registrar Usuario</h2>
+                <form id="registerForm">
+                    <input type="text" id="registerUsername" placeholder="Nombre de usuario" required>
+                    <input type="password" id="registerPassword" placeholder="Contraseña" required>
+                    <button type="submit">Registrar</button>
+                </form>
+                <div class="message" id="registerMessage"></div>
+            </div>
+        
+            <div class="logout-container" id="logoutContainer">
+                <p>Bienvenido, <span id="usernameDisplay"></span></p>
+                <button id="logoutButton">Cerrar Sesión</button>
+            </div>
+        
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/navegacion.js"></script> <!-- Incluir el archivo de navegación -->
+    <script src="../js/login.js"></script>
+</body>
+</html>

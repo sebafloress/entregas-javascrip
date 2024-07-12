@@ -1,0 +1,22 @@
+{
+  "name": "carrito",
+  "version": "1.0.0",
+  "description": "proyecto de javascrip coderhouse, carrito de compras",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebafloress/entregas-javascrip.git"
+  },
+  "author": "Sebastian Flores",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sebafloress/entregas-javascrip/issues"
+  },
+  "homepage": "https://github.com/sebafloress/entregas-javascrip#readme",
+  "dependencies": {
+    "latest-version": "^9.0.0"
+  }
+}
