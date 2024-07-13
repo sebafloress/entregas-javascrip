@@ -11,39 +11,57 @@ const IVA = 0.21;
 let carrito = [];
 let total = 0;
 
+
 const cuerpo = document.body;
 const container = document.querySelector('.container');
-const productosDark =document.querySelector('.Productos')
-const botons =document.querySelector('botones')
-const carritoDark = document.querySelector('cart')
-
-
+const productosDark = document.querySelector('.Productos');
+const botones = document.querySelectorAll('.botones');
+const filtrarProductosElement = document.querySelector('.filtrar-productos');
+const cart = document.querySelector('.cart');
 
 document.addEventListener('DOMContentLoaded', function() {
     const buttonToggle = document.getElementById('toggle-button');
 
-    buttonToggle.addEventListener('click' , function() {
-        cuerpo.classList.toggle('modo-oscuro');
+
+    if (localStorage.getItem('modoOscuro') === 'true') {
+        activarModoOscuro();
+    }
+
+    buttonToggle.addEventListener('click', function() {
+        const modoOscuroActivo = cuerpo.classList.toggle('modo-oscuro');
         container.classList.toggle('modo-oscuro');
         productosDark.classList.toggle('modo-oscuro');
-        botons.classList.toggle('modo-oscuro');
-        carritoDark.classList.toggle
-        updateButtonText();
-    })
+        botones.forEach(boton => boton.classList.toggle('modo-oscuro'));
+        filtrarProductosElement.classList.toggle('modo-oscuro');
+        cart.classList.toggle('modo-oscuro');
+        
+        
+        localStorage.setItem('modoOscuro', modoOscuroActivo);
 
-    function updateButtonText() {
-        if(cuerpo.classList.contains('modo-oscuro')) {
+        updateButtonText(modoOscuroActivo);
+    });
+
+    function activarModoOscuro() {
+        cuerpo.classList.add('modo-oscuro');
+        container.classList.add('modo-oscuro');
+        productosDark.classList.add('modo-oscuro');
+        botones.forEach(boton => boton.classList.add('modo-oscuro'));
+        filtrarProductosElement.classList.add('modo-oscuro');
+        cart.classList.add('modo-oscuro');
+    }
+
+    function updateButtonText(modoOscuroActivo) {
+        if (modoOscuroActivo) {
             buttonToggle.textContent = 'Cambiar a modo claro';
         } else {
             buttonToggle.textContent = 'Cambiar a modo oscuro';
         }
     }
 
-    updateButtonText();
-})
+    updateButtonText(cuerpo.classList.contains('modo-oscuro'));
+});
 
 document.addEventListener('DOMContentLoaded', () => {
-
     const carritoGuardado = localStorage.getItem('carrito');
     const totalGuardado = localStorage.getItem('total');
 
@@ -59,6 +77,3 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('mostrar-resumen').addEventListener('click', mostrarResumen);
     document.getElementById('reiniciar-compra').addEventListener('click', confirmarReinicioCompra);
 });
-
-
-
